@@ -127,15 +127,26 @@ body {
   flex-direction: column;
 }
 
-#inicio, #who, #fest, #where{
-  /* width: 100%; */
-  height: 100vh;
+.info {
+  /* background-image: url(../img/who-was-avicii.png); */
+  /* height: auto; */
+  /* margin-top: 15em; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-left: 17vw;
   margin-right: 17vw;
+}
+
+#inicio{
+  /* width: 100%; */
+  height: 100vh;
+  }
+
+#who, #fest, #where {
+  margin-top: 5em;
+  margin-bottom: 5em;
 }
 
 #only-section > div h1, h2{
@@ -152,7 +163,7 @@ body {
 }
 
 #only-section > div .tipo2{
-font-size: clamp(2.5rem, 8vw, 6rem);
+  font-size: clamp(2.5rem, 8vw, 6rem);
 }
 
 .tipo1 {
@@ -167,6 +178,14 @@ font-size: clamp(2.5rem, 8vw, 6rem);
   font-family: var(--text-font);
   font-size: clamp(1rem, 3vw, 2rem);
   margin-top: 1em;
+}
+
+.info h2 {
+  font-family: var(--font-tittle-1);
+  font-size: clamp(1rem, 3vw, 2rem);
+  color: #FFFFFF;
+  margin-bottom: 0.5em;
+  text-align: center;
 }
 
 /* Para invertir la "V" de AVICII */
@@ -185,20 +204,6 @@ font-size: clamp(2.5rem, 8vw, 6rem);
   margin-left: 8px;
 }
 
-.info {
-  /* background-image: url(../img/who-was-avicii.png); */
-  /* height: auto; */
-  margin-top: 15em;
-}
-
-.info h2 {
-  font-family: var(--font-tittle-1);
-  font-size: clamp(1rem, 3vw, 2rem);
-  color: #FFFFFF;
-  margin-bottom: 0.5em;
-  text-align: center;
-}
-
 #who img {
   width: 50%;
   height: auto;
@@ -215,3 +220,76 @@ font-size: clamp(2.5rem, 8vw, 6rem);
   border-radius:5%
 }
 
+#location{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  height: 60vh;
+  width: 80%;
+}
+
+#location iframe {
+  width: 100%;
+  height: 100%;
+  border-radius:5%
+}
+
+/* Contenedor general */
+.djs-imgs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 40px;
+}
+
+/* Tarjetas individuales */
+.dj-card {
+  width: 100%;
+  max-width: 15em;
+  background-color: rgb(14, 14, 14);
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  text-decoration: none;
+  display: block;
+  position: relative;
+}
+
+/* Imagen dentro de la tarjeta */
+.dj-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.card-tittle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: rgb(255, 255, 255);
+  padding: 0 10px;
+  text-align: center;
+  font-size: 1.8rem;
+  transform: translate(-50%, -50%);
+  font-weight: bolder;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-family: var(--font-tittle-1);
+  font-size: clamp(1em, 3vw, 1.5em);
+}
+
+/* animación hover */
+.dj-card:hover img {
+  opacity: 0.4;
+  transform: scale(1.1);
+}
+.dj-card:hover .card-tittle {
+  opacity: 1;
+}
+/* animación hover */
