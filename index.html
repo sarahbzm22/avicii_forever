@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <title>AVICII FOREVER: THE TRIBUTE</title>
     <meta charset="UTF-8">
@@ -8,14 +8,20 @@
 
     <link href="img/Favicon Avicii Oscuro.png" rel="icon" type="image/png">
 
+    <!-- Para iconos -->
     <script
       src="https://kit.fontawesome.com/c3fd22b8e3.js"
       crossorigin="anonymous"
     ></script>
 
+    <!-- Tipografía Lato de Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+    <!-- Librería para animaciones -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script src="js/script.js"></script>
 
@@ -26,9 +32,9 @@
 <body>
     <header id="menu">
 
-      <!-- <div id="logo-menu">
-        <img src="img/Avicii 4ever Negro Menú.png" alt="Logo Avicii Forever">
-      </div> -->
+      <div id="logo-menu">
+        <img src="img/Avicii 4ever Blanco Menú.png" alt="Logo Avicii Forever">
+      </div>
 
       <nav id="nav-menu">
         <div>
@@ -38,10 +44,10 @@
               <a href="#festival" onclick="closeMenu()">FESTIVAL</a>
             </li>
             <li>
-              <a href="#gallery" onclick="closeMenu()">GALLERY</a>
+              <a href="gallery.html" onclick="closeMenu()">GALLERY</a>
             </li>
             <li>
-              <a href="#tickets" onclick="closeMenu()">TICKETS</a>
+              <a href="tickets.html" onclick="closeMenu()">TICKETS</a>
             </li>
             <li>
               <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
@@ -50,7 +56,69 @@
         </div>
       </nav>
     </header>
-    <section id="startpoint-home"></section>
+    <section id="only-section" onscroll="changeOpacity()">
+      <div id="inicio" class="info">
+        <h1 class="tipo1" >A<span id="mirror1" class="mirror">V</span>ICII 4EVER:</h1> <!--  data-aos="fade-up" -->
+        <h1 class="tipo2" >THE TRIBUTE</h1>
+        <h2 class="tipo3" >Feel the rhythm. Remember the light.</h2>
+        <!-- <a href="#tickets">BUY TICKETS NOW</a> -->
+      </div>
+      <div id="who" class="info">
+        <h2>WHO WAS A<span id="mirror2" class="mirror">V</span>ICII
+        </h2>
+        <p>
+          Tim Bergling, better known as Avicii, wasn’t just a producer, he was the heartbeat of a generation.
+          Through his music, he gave a voice to emotions we couldn’t describe, blending electronic rhythm with human warmth. 
+          His songs like Wake Me Up, The Nights, and Waiting for Love became anthems of hope, reminding us to live fully, dream boldly, and never stop moving forward.
+        <p>
+          Behind the name Avicii stood a humble artist, a dreamer, and a visionary who changed the landscape of electronic music forever. 
+          His sound crossed borders, his melodies united strangers, and his light continues to shine through the beats that still echo on every dance floor.
+        </p>
+        <p>
+          Even though he’s gone, the world still dances to his music, because some lights never fade.</p>
+        <img src="img/who-was-avicii.png" alt="Who was Avicii">
+      </div>
+      <div id="fest" class="info">
+        <h2>
+           A<span class="mirror">V</span>ICII 
+           <span class="alt-font">4EVER</span>
+        </h2>
+        </h2>
+        <p>
+          AVICII FOREVER: THE TRIBUTE was born from the desire to keep his spirit alive, not only through music, but through shared emotion. 
+          This is more than a festival; it’s a space for connection, memory, and light.
+        <p>
+          Every stage, every visual, every sound is designed to honor his story, to bring fans from all around the world together in the same heartbeat that once defined an era. 
+          Here, the past and present merge in a celebration of everything Avicii created: unity, joy, and love through sound.
+        </p>
+        <p>
+          We gather not just to listen, but to feel again.
+          To remember the nights that changed us, and to dance once more, for him, and for the music that will live forever.</p>
+        <img src="img/fest.png" alt="Remembering Avicii">
+      </div>
+      <div id="where" class="info">
+        <h2>
+           WHERE WILL IT BE
+        </h2>
+        </h2>
+        <p>
+          AVICII FOREVER: THE TRIBUTE was born from the desire to keep his spirit alive, not only through music, but through shared emotion. 
+          This is more than a festival; it’s a space for connection, memory, and light.
+        <p>
+          Every stage, every visual, every sound is designed to honor his story, to bring fans from all around the world together in the same heartbeat that once defined an era. 
+          Here, the past and present merge in a celebration of everything Avicii created: unity, joy, and love through sound.
+        </p>
+        <p>
+          We gather not just to listen, but to feel again.
+          To remember the nights that changed us, and to dance once more, for him, and for the music that will live forever.</p>
+        <img src="img/fest.png" alt="Remembering Avicii">
+      </div>
+    </section>
+    <section>
+
+    </section>
     
 </body>
 </html>
+
+<!-- tengo que corregir lo de que se haya bajado el inicio y el margin top ponerlo individual posiblemente -->

@@ -1,3 +1,5 @@
+
+/* Cosas en común entre los 3 html */
 @font-face {
   font-family: 'AviciiText1';
   src: url('../fonts/VerminVibes2Soft-grr4.woff2') format('woff2');
@@ -18,20 +20,41 @@
   --text-font: 'Lato', sans-serif;
 }
 
- body {
+p {
+  font-family: var(--text-font);
+  font-size: clamp(14px, 1.5vw, 18px);
+  color: #FFFFFF;
+  text-align: center;
+}
+
+body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* background-color: #f4f4f4; */
+  width: 100%;
+  height: 100vh;
+  background-image: url('../img/fondo header.svg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 #menu {
-  top: 0;
-  padding: 2em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: fixed;
+  top: 0;
+  left: 0;
+  width: calc(100vw - 7em);
+  height: 3em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3em; 
+  /* background: transparent;  */
+  z-index: 1000;
 }
 
 #logo-menu{
@@ -39,7 +62,8 @@
   padding-right: 3em;
   border-radius: 5em;
   overflow: hidden;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
   height: 3em;
   display: flex;
   justify-content: center; 
@@ -58,15 +82,12 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  /* position: fixed; */
   padding-left: 3em;
   padding-right: 3em;
-  /* border: 3.5px solid var(--third-color); */
   border-radius: 5em;
   height: 3em;
-  /* box-shadow: 0 2px 8px var(--third-color); */
-  background-color: rgb(255, 255, 255);
-  
+  background-color: rgb(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);  
 }
 
 #nav-menu > div:first-child > i,
@@ -80,37 +101,117 @@
   margin: 0;
   padding: 0;
   gap: 3em;
-  /* font-family: 'AvicciText1'; */
-  /* justify-content: center; */
-  /* width: 100%; */
 }
-
-
-/* #menu > div:first-child > ul > li {
-  list-style: none;
-} */
 
 #nav-menu a {
   text-decoration: none;
   transition: color 0.3s ease;
   font-size: clamp(12px, 2vw, 14px);
-  color: rgb(10, 10, 10);
+  color: rgb(255, 255, 255);
   font-family: 'Lato', sans-serif;
   font-weight: 700 !important;
 }
 
 #nav-menu a:hover {
-  color: rgb(75, 75, 75);
+  color: #141414;
 }
 
-#startpoint-home {
+#only-section {
   width: 100%;
-  height: 100vh;
-  background-image: url('../img/fondo header.svg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  height: 600vh;
+  background-color: rgb(0, 0, 0, 0.4);
+  backdrop-filter: blur(12px);
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
+
+#inicio, #who, #fest, #where{
+  /* width: 100%; */
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 17vw;
+  margin-right: 17vw;
+}
+
+#only-section > div h1, h2{
+  color: #FFFFFF;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+#only-section > div .tipo1{
+  font-size: clamp(2rem, 7.5vw, 5.5rem);
+}
+
+#only-section > div .tipo2{
+font-size: clamp(2.5rem, 8vw, 6rem);
+}
+
+.tipo1 {
+  font-family: var(--font-tittle-1);
+}
+
+.tipo2 {
+  font-family: var(--font-tittle-2);
+}
+
+.tipo3 {
+  font-family: var(--text-font);
+  font-size: clamp(1rem, 3vw, 2rem);
+  margin-top: 1em;
+}
+
+/* Para invertir la "V" de AVICII */
+.mirror {
+  display: inline-block;
+  transform: scaleX(-1);
+  margin: 0 2px 0 -2px;
+}
+
+#mirror1 {
+  margin: 0 4px 0 -4px;
+}
+
+.alt-font {
+  font-family: var(--font-tittle-2);
+  margin-left: 8px;
+}
+
+.info {
+  /* background-image: url(../img/who-was-avicii.png); */
+  /* height: auto; */
+  margin-top: 15em;
+}
+
+.info h2 {
+  font-family: var(--font-tittle-1);
+  font-size: clamp(1rem, 3vw, 2rem);
+  color: #FFFFFF;
+  margin-bottom: 0.5em;
+  text-align: center;
+}
+
+#who img {
+  width: 50%;
+  height: auto;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  border-radius:5%
+}
+
+#fest img {
+  width: 70%;
+  height: auto;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  border-radius:5%
+}
+
