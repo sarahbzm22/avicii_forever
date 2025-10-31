@@ -1,16 +1,16 @@
-window.addEventListener('scroll', () => {
-  const section = document.querySelector('#only-section');
-  const scrollY = window.scrollY;
-  const fadeDistance = window.innerHeight * 0.7;
+document.addEventListener("DOMContentLoaded", () => {
+  const section = document.getElementById("only-section");
 
-  // Para calcular la opacidad según el scroll
-  let opacity = Math.min(scrollY / fadeDistance, 1);
-  section.style.opacity = opacity;
+  // Bloquea el scroll al cargar
+  document.body.classList.add("no-scroll");
 
-  // Para que cuando llege a opacidad completa, se active el scroll normal
-  if (opacity >= 1) {
-    section.classList.add('visible');
-  } else {
-    section.classList.remove('visible');
-  }
+  // Espera 2 segundos antes de empezar el fade-in
+  setTimeout(() => {
+    section.classList.add("visible");
+
+    // Espera a que acabe la animación (2s) y luego permite hacer scroll
+    setTimeout(() => {
+      document.body.classList.remove("no-scroll");
+    }, 2000);
+  }, 2000);
 });
