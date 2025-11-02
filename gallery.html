@@ -41,13 +41,13 @@
           <i class="fas fa-bars" onclick="openMenu()"></i>
           <ul>
             <li>
-              <a href="index.html" onclick="closeMenu()">FESTIVAL</a>
+              <a class="link" href="index.html" onclick="closeMenu()">FESTIVAL</a>
             </li>
             <li>
-              <a href="gallery.html" onclick="closeMenu()">GALLERY</a>
+              <a class="current_page" href="gallery.html" onclick="closeMenu()">GALLERY</a>
             </li>
             <li>
-              <a href="#tickets" onclick="closeMenu()">TICKETS</a>
+              <a class="link" href="tickets.html" onclick="closeMenu()">TICKETS</a>
             </li>
             <li>
               <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
@@ -56,5 +56,348 @@
         </div>
       </nav>
     </header>
-
+    <section id="only-section" onscroll="changeOpacity()">
+      <div id="inicio" class="info">
+        <h1 class="tipo1" >A<span id="mirror1" class="mirror">V</span>ICII'S</h1> <!--  data-aos="fade-up" -->
+        <h1 class="tipo2" >GALLERY</h1>
+      </div>
+      <div id="text" class="info">
+         <p>
+          This space was created for fans to share and explore images and memories of Avicii.
+        </p>
+        <p>
+          Feel free to send us your photos and stories through our social media, we’ll feature them here so everyone can celebrate his legacy together.
+        </p>
+        <p>
+          Click on any photo to read the heartfelt messages from fans around the world, celebrating the unforgettable moments created by Avicii's music.
+        </p>
+      </div>
+      <div id="gallery" class="info">
+        <ul class="gallery-columns">
+          <li>
+            <figure class="memories" onclick="openModal(this)">
+              <img src="https://i.pinimg.com/564x/78/81/7f/78817f64da72d065559bbd7c4c21ecdd.jpg" alt="Gallery photo 1">
+              <figcaption>
+            <h3>From: Emily Cooper</h3>
+            <p class="message">
+              The night we danced to Wake Me Up under the stars, your music made time stop. I still feel it every time I press play.
+            </p>
+          </figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure class="memories" onclick="openModal(this)">
+              <img src="https://i1.sndcdn.com/artworks-000072478435-96qdg3-t240x240.jpg" alt="Gallery photo 2">
+              <figcaption>
+            <h3>From: Lucas Turner</h3>
+            <p class="message">
+              When The Nights dropped live, I knew that moment was mine forever. My friends, sweat, and lights, all of it because of his music.
+            </p>
+          </figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure class="memories" onclick="openModal(this)">
+              <img src="https://avicii.com/wp-content/uploads/sb-instagram-feed-images/460696320_1465680940800305_5177984919649715582_nfull.jpg" alt="Gallery photo 3">
+              <figcaption>
+            <h3>From: Olivia Rivera</h3>
+            <p class="message">
+              On the dance-floor at midnight, your remix of Without You lit up every heartbeat around me. I will always remember that moment, your music turned strangers into friends.
+            </p>
+          </figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure class="memories" onclick="openModal(this)">
+              <img src="https://c.saavncdn.com/574/Avicii-Chinese-2022-20231018161905-500x500.jpg" alt="Gallery photo 4">
+              <figcaption>
+            <h3>From: Mei Lin Wong</h3>
+            <p class="message">
+              When Levels went global, I felt it in the streets of Taipei, your beat made us leap, together. Still feeling that jump every time the bass drops.
+            </p>
+          </figcaption>
+            </figure>
+          </li>
+           <li>
+            <figure class="memories" onclick="openModal(this)">
+              <img src="https://m.media-amazon.com/images/M/MV5BOTI4MzUzNzktMzdhYS00YTNlLThmMWQtNDI0YjUyNGE3MDRlXkEyXkFqcGc@._V1_.jpg" alt="Gallery photo 5">
+              <figcaption>
+            <h3>From: Ethan Martinez</h3>
+            <p class="message">
+              When the beat dropped and the lights exploded, I turned to my friend and we knew: this was more than a show, it was life itself. His music made the night unforgettable.
+            </p>
+          </figcaption>
+            </figure>
+          </li>
+           <li>
+            <figure class="memories" onclick="openModal(this)">
+              <img src="https://i.pinimg.com/736x/47/26/00/472600f3c0eab8b9ebc4b1cc78aeba80.jpg" alt="Gallery photo 6">
+              <figcaption>
+            <h3>From: Sophia García</h3>
+            <p class="message">
+              When the beat soared and the crowd lifted me, I touched the sky with Levels. That night, his music turned strangers into friends and dance floors into home.
+            </p>
+          </figcaption>
+            </figure>
+          </li>
+           <li>
+            <figure class="memories" onclick="openModal(this)">
+              <img src="https://worldredeye.com/wp-content/uploads/2018/04/20/unnamed-1-1.jpg" alt="Gallery photo 7">
+              <figcaption>
+            <h3>From: Maya Jensen</h3>
+            <p class="message">
+              When the crowd roared and the lights dropped, I felt it under my feet, his music turned that moment into eternity. I’ll never forget it.
+            </p>
+          </figcaption>
+            </figure>
+          </li>
+           <li>
+            <figure class="memories" onclick="openModal(this)">
+              <img src="https://estaticos-cdn.prensaiberica.es/clip/9d7ce877-eaf3-4e58-9e3c-8f18c8b51d83_original-libre-aspect-ratio_default_0.jpg" alt="Gallery photo 8">
+              <figcaption>
+            <h3>From: Javier Ramos</h3>
+            <p class="message">
+              When the lights exploded and Levels hit, I closed my eyes and felt the world pause for just a second. You made that moment mine.
+            </p>
+          </figcaption>
+            </figure>
+          </li>
+           <li>
+            <figure class="memories" onclick="openModal(this)">
+              <img src="https://i.pinimg.com/236x/68/89/22/688922d7e48d19c63fe6432e9761ce83.jpg" alt="Gallery photo 9">
+              <figcaption>
+            <h3>From: Daniel Foster</h3>
+            <p class="message">
+              Hearing Hey Brother live felt like coming home. Everyone around me sang every word, it wasn’t just a concert, it was a family reunion through music.
+            </p>
+          </figcaption>
+            </figure>
+          </li>
+           <li>
+            <figure class="memories" onclick="openModal(this)">
+              <img src="https://media2.nekropole.info/2018/04/Avicii_5ada3d9ebec2d.jpg" alt="Gallery photo 10">
+              <figcaption>
+            <h3>From: Kai Nakamura</h3>
+            <p class="message">
+              When the lights went silent for a second, then Levels exploded, I found myself jumping with a stranger, both of us shouting "this is it!" Thanks for that moment.
+            </p>
+          </figcaption>
+            </figure>
+          </li>
+           <li>
+            <figure class="memories" onclick="openModal(this)">
+              <img src="https://i.pinimg.com/originals/f5/83/1c/f5831cb97ac621a0529846467956a26f.jpg" alt="Gallery photo 11">
+              <figcaption>
+            <h3>From: Mia Santos</h3>
+            <p class="message">
+              When the beat dropped and the lights faded into colour, I closed my eyes and felt your music call me home. That night I danced like nothing else existed.
+            </p>
+          </figcaption>
+            </figure>
+          </li>
+           <li>
+            <figure class="memories" onclick="openModal(this)">
+              <img src="https://i.ebayimg.com/images/g/BOcAAeSww0JoKzZp/s-l1200.jpg" alt="Gallery photo 12">
+              <figcaption>
+            <h3>From: Zach Kim</h3>
+            <p class="message">
+              Under the lights with thousands of voices rising, our hearts beat in sync to The Nights. I’ll never forget that surge of joy.
+            </p>
+          </figcaption>
+            </figure>
+          </li>
+           <li>
+            <figure class="memories" onclick="openModal(this)">
+              <img src="https://edmhousenetwork.com/wp-content/uploads/2024/02/avicii-1000x1000.jpg" alt="Gallery photo 13">
+              <figcaption>
+            <h3>From: Liam Brooks</h3>
+            <p class="message">
+              The drop hit, the sky lit up, and I knew I’d never be the same. Your beats changed me, still do, every time I listen.
+            </p>
+          </figcaption>
+            </figure>
+          </li>
+           <li>
+            <figure class="memories" onclick="openModal(this)">
+              <img src="https://i.pinimg.com/736x/6b/c4/a0/6bc4a0d51c36e583efe2afdfe62aa7b4.jpg" alt="Gallery photo 14">
+              <figcaption>
+            <h3>From: Zara Thompson</h3>
+            <p class="message">
+              When the beat hit and we all jumped without knowing why, your music took over every heart in the crowd. That night, we were one.
+            </p>
+          </figcaption>
+            </figure>
+          </li>
+           <li>
+            <figure class="memories" onclick="openModal(this)">
+              <img src="https://occ-0-8407-2219.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABcNZqXDPnuNNa4RQ27kC38Eg-uG5V23eI6KLBQfRG4_DVeoyFgdqd-97SofhC2YP2DkipCxJ4zgCR95rDrwswHyoazhpSaAK7oMj.jpg?r=e62" alt="Gallery photo 15">
+              <figcaption>
+            <h3>From: Jason Lin</h3>
+            <p class="message">
+              The lights went out, the crowd held its breath, then Levels broke the silence. In that moment, I was infinite.
+            </p>
+          </figcaption>
+            </figure>
+          </li>
+           <li>
+            <figure class="memories" onclick="openModal(this)">
+              <img src="https://pbs.twimg.com/media/EKiqtAzWkAU_3Ox.jpg" alt="Gallery photo 16">
+              <figcaption>
+            <h3>From: Alex Morgan</h3>
+            <p class="message">
+              In that sea of people, your beat found me. In the sound and the lights, I felt alive again, thank you for that moment.
+            </p>
+          </figcaption>
+            </figure>
+          </li>
+           <li>
+            <figure class="memories" onclick="openModal(this)">
+              <img src="https://i1.sndcdn.com/artworks-eARUWzxXacISS383-Bw4xgg-t500x500.png" alt="Gallery photo 17">
+              <figcaption>
+            <h3>From: Harper Lee</h3>
+            <p class="message">
+              With your remix in the background, I found strength when I needed it most. The beat never stopped, and neither will the memory.
+            </p>
+          </figcaption>
+            </figure>
+          </li>
+           <li>
+            <figure class="memories" onclick="openModal(this)">
+              <img src="https://i.pinimg.com/originals/68/c1/b4/68c1b4940dde471c3fdf96edd7016b3e.jpg" alt="Gallery photo 18">
+              <figcaption>
+            <h3>From: Léa Martinez</h3>
+            <p class="message">
+              Halfway through the set, the lights dropped and Levels hit in full, I looked around and saw thousands of faces lit with the same spark. That moment, we became one.
+            </p>
+          </figcaption>
+            </figure>
+          </li>
+           <li>
+            <figure class="memories" onclick="openModal(this)">
+              <img src="https://www.rollingstone.com/wp-content/uploads/2018/06/rs-234126-DSC_4024-klar_.jpg?w=910&h=511&crop=1" alt="Gallery photo 19">
+              <figcaption>
+            <h3>From: Nathan Hall</h3>
+            <p class="message">
+              As the crowd surged and the lights hit the sky, I realised we weren’t just at a show, we were part of a movement. His music brought us all together in that moment.
+            </p>
+          </figcaption>
+            </figure>
+          </li>
+           <li>
+            <figure class="memories" onclick="openModal(this)">
+              <img src="https://i.pinimg.com/originals/ec/3f/5e/ec3f5e39fc29c84a47db17aa9b805f68.jpg" alt="Gallery photo 20">
+              <figcaption>
+            <h3>From: Emilia Vargas</h3>
+            <p class="message">
+              When the crowd lifted its lights and your beat rose above it all, I knew I wasn’t just at a show. I was part of your story. Thank you for making me feel alive.
+            </p>
+          </figcaption>
+            </figure>
+          </li>
+           <li>
+            <figure class="memories" onclick="openModal(this)">
+              <img src="https://todayinmadonnahistory.com/wp-content/uploads/2014/03/m-avicii-1.jpg" alt="Gallery photo 21">
+              <figcaption>
+            <h3>From: Javier Alvarez</h3>
+            <p class="message">
+              The lights dimmed and your silhouette appeared, when Wake Me Up hit, I knew I was exactly where I needed to be. Thank you for the soundtrack of my nights.
+            </p>
+          </figcaption>
+            </figure>
+          </li>
+           <li>
+            <figure class="memories" onclick="openModal(this)">
+              <img src="https://www.ravejungle.com/wp-content/uploads/2024/05/Avicii-levels.jpg" alt="Gallery photo 22">
+              <figcaption>
+            <h3>From: Riley Parker</h3>
+            <p class="message">
+              When Levels hit and the whole floor jumped, I realised music can set you free. Thanks for that moment, your beat still moves me.
+            </p>
+          </figcaption>
+            </figure>
+          </li>
+           <li>
+            <figure class="memories" onclick="openModal(this)">
+              <img src="https://pbs.twimg.com/media/GHUdQPabgAAJ8w-?format=jpg&name=4096x4096" alt="Gallery photo 23">
+              <figcaption>
+            <h3>From: Sofia López</h3>
+            <p class="message">
+              When the lights faded and your track began, I felt the entire night breathe with one heartbeat. Your music made us one.
+            </p>
+          </figcaption>
+            </figure>
+          </li>
+           <li>
+            <figure class="memories" onclick="openModal(this)">
+              <img src="https://i.pinimg.com/564x/8a/b1/46/8ab146bcbc70645c07ae041bb56c09ab.jpg" alt="Gallery photo 24">
+              <figcaption>
+            <h3>From: Aaliyah Nguyen</h3>
+            <p class="message">
+              In that sea of flickering lights and music, I found a moment that changed everything. Your track played, and I realised I wasn’t just at a concert, I belonged. Thank you for showing us how to feel alive.
+            </p>
+          </figcaption>
+            </figure>
+          </li>
+           <li>
+            <figure class="memories" onclick="openModal(this)">
+              <img src="https://i.redd.it/gi8ebcfvwr361.jpg" alt="Gallery photo 25">
+              <figcaption>
+            <h3>From: Dylan Fernandez</h3>
+            <p class="message">
+              That moment when the crowd jumped together and you dropped Levels, I felt the beat in my chest and the sky in my arms. Thanks for making me fly.
+            </p>
+          </figcaption>
+            </figure>
+          </li>
+        </ul>
+      </div>
+      <footer>
+        <figure id="logo-footer">
+          <img src="img/Avicii 4ever Blanco Menú.png" alt="Logo Avicii Forever">
+        </figure>
+        <ul class="social-webs">
+          <li>
+            <a href="https://www.facebook.com/avicii">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://x.com/avicii">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/avicii">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/user/AviciiOfficial">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://open.spotify.com/artist/1vCWHaC5f2uS3yhpwWbIA6">
+              <i class="fab fa-spotify"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.tiktok.com/@avicii">
+              <i class="fab fa-tiktok"></i>
+            </a>
+          </li>
+        </ul>
+        <figure id="sponsors">
+          <img src="img/sponsors_footer.png" alt="Sponsors">
+        </figure>
+      </footer>
+    </section>
+     <div id="modal">
+      <figure>
+        <img src="" alt="" />
+        <figcaption></figcaption>
+      </figure>
+      <i class="fa-solid fa-xmark" onclick="closeModal()"></i>
+    </div>
 </body>
+</html>

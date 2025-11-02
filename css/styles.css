@@ -28,9 +28,15 @@ p {
   text-align: center;
 }
 
-ul{
-  padding: 0;
+ul {
+  list-style: none;
   margin: 0;
+  padding: 0;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -103,9 +109,6 @@ body {
 
 #nav-menu ul {
   display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
   gap: 3em;
 }
 
@@ -113,15 +116,28 @@ body {
   text-decoration: none;
   transition: color 0.3s ease;
   font-size: clamp(12px, 2vw, 14px);
-  color: rgb(255, 255, 255);
   font-family: 'Lato', sans-serif;
-  font-weight: 700 !important;
+  /* font-weight: 700 !important; */
   
+}
+
+.link{
+  color: rgb(255, 255, 255);
+}
+
+.current_page{
+  background: linear-gradient(90deg, #ff0050, #00ffed, #ffed00, #9b00ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 300%;
+  animation: gradientShift 6s ease infinite alternate;
 }
 
 #nav-menu a:hover {
   background: linear-gradient(90deg, #ff0050, #00ffed, #ffed00, #9b00ff);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   background-size: 300%;
   animation: gradientShift 6s ease infinite alternate;
@@ -191,6 +207,7 @@ body {
   font-family: var(--font-tittle-2);
   background: linear-gradient(90deg, #ff0050, #00ffed, #ffed00, #9b00ff);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   background-size: 300%;
   animation: gradientShift 6s ease infinite alternate;
@@ -224,6 +241,7 @@ body {
 .rainbow {
   background: linear-gradient(90deg, #ff0050, #00ffed, #ffed00, #9b00ff);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   background-size: 300%;
   animation: gradientShift 6s ease infinite alternate;
@@ -235,6 +253,7 @@ body {
   margin-left: 8px;
   background: linear-gradient(90deg, #ff0050, #00ffed, #ffed00, #9b00ff);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   background-size: 300%;
   animation: gradientShift 6s ease infinite alternate;
@@ -243,6 +262,7 @@ body {
 #where h2, #djs h2 {
    background: linear-gradient(90deg, #ff0050, #00ffed, #ffed00, #9b00ff);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   background-size: 300%;
   animation: gradientShift 6s ease infinite alternate;
@@ -286,7 +306,11 @@ body {
   border-radius:5%
 }
 
-/* Contenedor general */
+#text{
+  margin-top: 2em;
+  margin-bottom: 10em;
+}
+
 .djs-imgs {
   display: flex;
   justify-content: center;
@@ -299,7 +323,6 @@ body {
   position: relative;
   width: 100%;
   max-width: 15em;
-  /* background-color: rgb(14, 14, 14); */
   border-radius: 20px;
   overflow: hidden;
   text-decoration: none;
@@ -313,10 +336,7 @@ body {
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 20% 30%, #ff0050 0%, transparent 50%),
-              radial-gradient(circle at 70% 60%, #00ffed 0%, transparent 50%),
-              radial-gradient(circle at 40% 80%, #ffed00 0%, transparent 50%),
-              radial-gradient(circle at 80% 20%, #9b00ff 0%, transparent 50%);
+  background: radial-gradient(circle at 20% 20%, #ff0050 0%, transparent 50%), radial-gradient(circle at 80% 80%, #00ffed 0%, transparent 50%), radial-gradient(circle at 20% 80%, #ffed00 0%, transparent 50%), radial-gradient(circle at 80% 20%, #9b00ff 0%, transparent 50%);
   opacity: 0;
   transition: opacity 0.5s ease, transform 5s ease;
   z-index: 0;
@@ -361,6 +381,93 @@ body {
   opacity: 1;
 }
 
+/* Gallery Page */
+
+/* #gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 17vw;
+    margin-right: 17vw;
+} */
+
+.gallery-columns {
+  column-count: 4;
+  column-width: 200px;
+  column-gap: 0;
+  width: 100%;
+}
+
+.gallery-columns li {
+  break-inside: avoid;
+  width: 200px;
+  height: auto;
+  padding: 0.25em;
+}
+
+.gallery-columns img {
+  max-width: 200px;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+figure h3 {
+  font-family: var(--font-tittle-1);
+  background: linear-gradient(90deg, #ff0050, #00ffed, #ffed00, #9b00ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 300%;
+  animation: gradientShift 6s ease infinite alternate;
+  display: flex;
+  justify-content: center;
+}
+
+.memories figcaption {
+  display: none;
+}
+
+
+#modal {
+  position: fixed;
+  z-index: 1;
+  top: 22%;
+  left: 20%;
+  width: 60vw;
+  height: 70vh;
+  background-color: rgb(0, 0, 0, 0.5);
+  backdrop-filter: blur(12px);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1em;
+  overflow: hidden;
+}
+
+#modal > figure {
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
+}
+
+#modal > figure > * {
+  width: 40%;
+  max-width: 600px;
+  align-self: center;
+  border-radius: 1em;
+}
+
+#modal > i {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #FFFFFF;
+}
+
+
 footer {
   width: 100%;
   display: flex;
@@ -368,15 +475,11 @@ footer {
   justify-content: center;
   align-items: center;
   margin-top: 5em;
-  background: radial-gradient(circle at 20% 30%, #ff0050 0%, transparent 50%),
-              radial-gradient(circle at 70% 60%, #00ffed 0%, transparent 50%),
-              radial-gradient(circle at 40% 80%, #ffed00 0%, transparent 50%),
-              radial-gradient(circle at 80% 20%, #9b00ff 0%, transparent 50%);
+  background: radial-gradient(circle at 20% 20%, #ff0050 0%, transparent 50%), radial-gradient(circle at 80% 80%, #00ffed 0%, transparent 50%), radial-gradient(circle at 20% 80%, #ffed00 0%, transparent 50%), radial-gradient(circle at 80% 20%, #9b00ff 0%, transparent 50%);
   transition: opacity 0.5s ease, transform 5s ease;
   z-index: 0;
   border-top-left-radius: 6em;
   border-top-right-radius: 6em;
-  /* background-image: src('../img/footer-background.jpg'); */
 }
 
 #logo-footer {
@@ -393,13 +496,6 @@ footer {
   width: auto;
   object-fit: cover;
 }
-
-/* .line {
-        flex: 1 1 0%;
-        width: initial;
-        margin: 0px 40px 0px 0px;
-        background: linear-gradient(to right, rgba(0, 0, 0, 0), var(--tml-footer-color));
-    } */
 
 .social-webs {
   display: flex;
@@ -428,17 +524,17 @@ footer {
 /* TABLET */
 @media (max-width: 1024px) {
 
+  p {
+    font-size: clamp(16px, 1.8vw, 19px);
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+
   body {
-    background-image: url('../img/fondo header MOVIL.svg'); 
+    background-image: url('../img/fondo header TABLET.svg'); 
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
-  }
-
-  p {
-    font-size: clamp(13px, 1.8vw, 16px);
-    margin-left: 1em;
-    margin-right: 1em;
   }
 
   #menu {
@@ -471,14 +567,21 @@ footer {
     font-size: clamp(11px, 1.6vw, 13px);
   } */
 
-  /* Secciones */
   .info {
     margin-left: 10vw;
     margin-right: 10vw;
   }
 
-  #who img, #fest img {
-    width: 70%;
+  .info h2 {
+    font-size: 2.5em;
+}
+
+  #who img {
+    width: 80%;
+  }
+
+  #fest img {
+    width: 100%;
   }
 
   #inicio .tipo1 {
@@ -493,13 +596,11 @@ footer {
     font-size: clamp(0.9rem, 2.5vw, 1.5rem);
   }
 
-  /* Mapa */
   #location {
     width: 90%;
     height: 50vh;
   }
 
-  /* Tarjetas de DJs */
   .djs-imgs {
     gap: 15px;
     padding: 20px;
@@ -507,13 +608,52 @@ footer {
 
   .dj-card {
     max-width: 13em;
+    background-color: rgb(0, 0, 0);
+  }
+
+  .dj-card img {
+    opacity: 0.8;
   }
 
   .card-tittle {
     font-size: clamp(0.9em, 2.5vw, 1.2em);
+    opacity: 1;
+  background: linear-gradient(90deg, #ff0050, #00ffed, #ffed00, #9b00ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 300%;
+  animation: gradientShift 6s ease infinite alternate;
   }
 
-  /* Footer */
+  figure h3 {
+    font-size: 2em;
+}
+
+  .message {
+    font-size:22px;
+  }
+
+  #modal {
+    top: 35%;
+    left: 12%;
+    width: 77vw;
+    height: 35vh;
+  }
+
+  #modal > figure {
+    width: 100%;
+  }
+
+  #modal > figure > * {
+    width: 80%;
+    max-width: 600px;
+  }
+
+  #modal > figure img {
+    display: none;
+  }
+
   footer {
     border-top-left-radius: 4em;
     border-top-right-radius: 4em;
@@ -532,10 +672,150 @@ footer {
   }
 }
 
-/* ========================= */
-/* 📞 MEDIA QUERIES MÓVIL */
-/* ========================= */
+/* MÓVIL */
 @media (max-width: 767px) {
-  /* Esto lo dejamos listo para cuando tú diseñes el menú móvil */
+
+  body {
+    background-image: url('../img/fondo header MOVIL.svg'); 
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+  }
+
+#nav-menu {
+    padding-left: 0.9em;
+    padding-right: 0.9em;
+    border-radius: 10em;
+}
+   
+  #nav-menu > div:first-child > i {
+      display: block;
+      cursor: pointer;
+      color: white;
+      font-size: 1.5rem;
+   }
+
+  #nav-menu > div:first-child > ul {
+        position: fixed;
+        top: 27vh;
+        /* left: -16.7em; */
+        right: 100vw;
+        width: 100vw;
+        height: 30vh;
+        z-index: 1;
+        padding: 30% 0;
+        gap: 4em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: radial-gradient(circle at 20% 20%, #ff0050 0%, transparent 50%), radial-gradient(circle at 80% 80%, #00ffed 0%, transparent 50%), radial-gradient(circle at 20% 80%, #ffed00 0%, transparent 50%), radial-gradient(circle at 80% 20%, #9b00ff 0%, transparent 50%);
+        backdrop-filter: blur(12px);
+        transition-duration: 1s;
+        flex-direction: column;
+        border-radius: 2em;
+    }
+
+  #nav-menu > div:first-child > ul li a {
+    color: #FFFFFF;
+    font-size: 1.8rem;
+    text-decoration: none;
+   font-family: var(--font-tittle-1);
+  }
+
+  .current_page {
+    background: #FFFFFF;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 300%;
 }
 
+  #nav-menu > div:first-child > ul > li:last-child {
+    display: block;
+    position: absolute;
+    right: 2em;
+    top: 2em;
+  }
+
+  #nav-menu > div:first-child > ul > li:last-child > i {
+    color: white;
+    font-size: 2em;
+    cursor: pointer;
+  }
+
+  #nav-menu a:hover {
+  background: #141414;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 300%;
+  animation: gradientShift 6s ease infinite alternate;
+}
+
+.fa-solid, .fas {
+    font-weight: 900;
+}
+
+
+#only-section > div .tipo1 {
+    font-size: 2.5em;
+}
+
+#only-section > div .tipo2 {
+    font-size: 3em;
+}
+
+  #who img {
+    width: 100%;
+  }
+
+  .dj-card {
+        max-width: 8.5em;
+  }
+
+  .info h2 {
+  font-size: 1.3em;
+  }
+
+  .gallery-columns li {
+    width: 160px;
+  }
+
+  .gallery-columns {
+    column-count: 2;
+    column-width: 150px;
+    column-gap: 0;
+    width: 100%;
+  }
+  .gallery-columns img {
+    max-width: 160px;
+  }
+
+  #modal {
+    top: 35%;
+    left: 11%;
+    width: 80vw;
+    height: 45vh;
+  }
+
+  figure h3 {
+    font-size: 1.4em;
+  }
+
+  .message {
+    font-size: 19px;
+  }
+
+  #modal > figure {
+    width: 100%;
+  }
+
+  #modal > figure > * {
+    width: 80%;
+    max-width: 600px;
+  }
+
+  #modal > figure img {
+    display: none;
+  }
+}
