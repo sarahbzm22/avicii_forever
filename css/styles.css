@@ -943,6 +943,13 @@ footer {
   .social-webs a {
     font-size: clamp(1.3rem, 4vw, 2rem);
   }
+
+  #modal-tickets {
+    top: 30%;
+    width: 60vw;
+    height: 33vh;
+}
+
 }
 
 /* MÓVIL */
@@ -1146,7 +1153,4 @@ form {
     height: 48vh;
     width: 70vw;
 }
-
-
-
 }
