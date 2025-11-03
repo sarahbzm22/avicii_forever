@@ -28,6 +28,11 @@ p {
   text-align: center;
 }
 
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
 ul {
   list-style: none;
   margin: 0;
@@ -382,15 +387,6 @@ body {
 }
 
 /* Gallery Page */
-
-/* #gallery {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 17vw;
-    margin-right: 17vw;
-} */
-
 .gallery-columns {
   column-count: 4;
   column-width: 200px;
@@ -429,7 +425,7 @@ figure h3 {
 }
 
 
-#modal {
+#modal-gallery {
   position: fixed;
   z-index: 1;
   top: 22%;
@@ -445,20 +441,20 @@ figure h3 {
   overflow: hidden;
 }
 
-#modal > figure {
+#modal-gallery > figure {
   width: 70%;
   display: flex;
   justify-content: space-around;
 }
 
-#modal > figure > * {
+#modal-gallery > figure > * {
   width: 40%;
   max-width: 600px;
   align-self: center;
   border-radius: 1em;
 }
 
-#modal > i {
+#modal-gallery > i {
   position: absolute;
   top: 1rem;
   right: 1rem;
@@ -468,6 +464,244 @@ figure h3 {
 }
 
 
+/* Tickets page */
+#tickets-conteiner {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-left: 17vw;
+  margin-right: 17vw;
+  flex-wrap: nowrap;
+  gap: 2em;
+}
+
+.ticket-options {
+  max-width: 25em;
+  height: 36em;
+  background-color: rgb(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  border-radius: 1em;
+  overflow: hidden;
+  text-decoration: none;
+  /* color: #FFFFFF; */
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ticket-options img {
+    width: 25em;
+    max-height: 14em;
+    height: auto;
+}
+
+.ticket-options div p{
+  font-size: 0.9em;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+
+.ticket-options div h2 {
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  font-family: var(--font-tittle-1);
+  background: linear-gradient(90deg, #ff0050, #00ffed, #ffed00, #9b00ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 300%;
+  animation: gradientShift 6s ease infinite alternate;
+}
+
+/* Buying Page */
+#contenedor-buying {
+  height: 9em;
+}
+
+#contenedor-buying, #calendar, #more-info {
+  border-radius: 1.5em;
+  background-color: rgb(255, 255, 255, 0.2);
+  height: auto;
+  position: relative;
+  padding: 19px;
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+  gap: 2em;
+  overflow: hidden;
+  margin: 2em;
+  width: 40em;
+}
+
+#pass {
+  display: flex;
+  flex-direction: row;
+  gap: 5em;
+  align-items: center;
+}
+
+#pass h2 {
+  margin: 0;
+}
+
+.ticket-price {
+  display: flex;
+  align-items: center;
+  gap: 1.5em;
+}
+
+#less-tickets, #number-of-tickets, #more-tickets {
+  font-size: 1.5rem;
+  color: #FFFFFF;
+  font-family: var(--font-tittle-1);
+}
+
+#less-tickets, #more-tickets { 
+  background-color: rgb(0, 0, 0, 0.4);
+  border: none;
+  cursor: pointer;
+  border-radius: 2em;
+  padding: 0.5em 0.8em;
+}
+
+#ticket-icon {
+  font-size: 2em;
+}
+
+.total-price, .confirm {
+  font-size: 1.2rem;
+    font-family: var(--font-tittle-1);
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+    background-color: rgb(0, 0, 0, 0.4);
+    padding: 0.7em 2em;
+    border-radius: 2em;
+    border: none;
+}
+
+#calendar h2 {
+  margin: 0;
+}
+
+#calendar div {
+  width: 36em;
+}
+
+table {
+  width: 36em;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+thead {
+  display: flex;
+}
+
+td {
+ font-family: var(--text-font);
+    text-align: center;
+    color: #FFFFFF;
+    padding: 4px;
+    width: 5em;
+    height: 3em;
+}
+
+#days-number td {
+  background-color: rgb(0, 0, 0, 0.4);
+  border-radius: 1em;
+}
+
+#days-number td:first-child, #days-number td:last-child{
+  background-color: rgb(0, 0, 0, 0);
+}
+
+#days-number td:hover {
+  background-color: rgb(255, 255, 255, 0.2);
+}
+
+#days-number td:first-child:hover, #days-number td:last-child:hover {
+  background-color: rgb(255, 255, 255, 0);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 36em;
+  gap: 2em;
+}
+
+.label {
+    display: none;
+}
+
+#name, #surname, #email, #phone-number {
+  /* color:#141414; */
+  height: 3em;
+  border-radius: 3em;
+  background-color: rgb(255, 255, 255, 0.6);
+  padding-left: 1em;
+  border: none;
+  font-family: var(--text-font);
+}
+
+.total-summary {
+  font-size: 1rem;
+  font-family: var(--text-font);
+  /* display: flex; */
+  /* align-items: center; */
+  color: #FFFFFF;
+  /* background-color: rgb(0, 0, 0, 0.4); */
+  padding: 0.7em 2em;
+  border-radius: 2em;
+}
+
+#modal-tickets {
+    position: fixed;
+    z-index: 1;
+    top: 22%;
+    /* left: 20%; */
+    width: 30vw;
+    height: 60vh;
+    background-color: rgb(0, 0, 0, 0.5);
+    backdrop-filter: blur(12px);
+    /* display: none; */
+    justify-content: center;
+    align-items: center;
+    border-radius: 1em;
+    overflow: hidden;
+    padding: 2em;
+}
+
+#modal-tickets h2{
+  background: linear-gradient(90deg, #ff0050, #00ffed, #ffed00, #9b00ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 300%;
+  animation: gradientShift 6s ease infinite alternate;
+}
+
+#back-home{
+  font-size: 1.2rem;
+    font-family: var(--font-tittle-1);
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+    background-color: rgb(255, 255, 255, 0.3);
+    padding: 0.7em 2em;
+    border-radius: 2em;
+    border: none;
+    width: 100%;
+    justify-content: center;
+    margin-top: 2em;
+}
+
+/* Footer */
 footer {
   width: 100%;
   display: flex;
