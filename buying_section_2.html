@@ -90,15 +90,29 @@
               </thead>
               <tbody id="days-number">
                 <td>20</td>
-                <td class="number">21</td>
-                <td class="number">22</td>
-                <td class="number">23</td>
-                <td class="number">24</td>
-                <td class="number">25</td>
+                <td class="number" onclick="selectDay(this)">21</td>
+                <td class="number" onclick="selectDay(this)">22</td>
+                <td class="number" onclick="selectDay(this)">23</td>
+                <td class="number" onclick="selectDay(this)">24</td>
+                <td class="number" onclick="selectDay(this)">25</td>
                 <td>26</td>
               </tbody>
            </table>
         </div>
+      </div>
+      <div id="more-info" class="info" data-aos="fade-up">
+        <h2>Personal information</h2>
+        <form onsubmit="openTicketsModal(); return false;">
+          <label for="name" class="label">Name:</label>
+          <input type="text" id="name" placeholder="Name" required />
+          <label for="surname" class="label">Surname:</label>
+          <input type="text" id="surname" placeholder="Surname" required />
+          <label for="email" class="label">Email:</label>
+          <input type="email" id="email" placeholder="Email" required />
+          <label for="phone-number" class="label">Phone Number:</label>
+          <input type="number" id="phone-number" placeholder="Phone Number" required />
+          <input class="confirm" type="submit" value="Confirm order" />
+        </form>
       </div>
       <footer data-aos="fade-up">
         <figure id="logo-footer">
@@ -140,5 +154,16 @@
           <img src="img/sponsors_footer.png" alt="Sponsors">
         </figure>
       </footer>
+    </div>
     </section>
+    <div id="modal-tickets" class="info">
+      <div>
+        <h2>Purchase Successful!</h2>
+        <p>Thank you <strong id="n"></strong> <strong id="sn"></strong> for being part of AVICII 4EVER: THE TRIBUTE!</p>
+        <p>Your ticket has been confirmed, get ready for an unforgettable experience filled with music, lights, and emotions celebrating Avicii’s legacy.</p>
+        <p>You’ll receive an email at <strong id="eml"></strong> with your ticket details and all event information.</p>
+        <p>We’ll contact you at <strong id="phn"></strong> if necessary.</p>
+        <button id="back-home" onclick="closeTicketsModal()">Home</button>
+      </div>
+    </div>
 </body>

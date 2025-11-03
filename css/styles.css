@@ -628,6 +628,28 @@ td {
   background-color: rgb(255, 255, 255, 0);
 }
 
+#days-number td.number.selected {
+  background-color: rgb(255, 255, 255, 0.2);
+  color: #FFFFFF;
+  font-weight: bold;
+  border-radius: 1em;
+  animation: gradientShift 6s ease infinite alternate;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+
+.number {
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.number.selected {
+  background-color: rgba(255, 255, 255, 0.2);
+  /* color: black;
+  border-radius: 8px; */
+}
+
+
 form {
   display: flex;
   flex-direction: column;
@@ -669,7 +691,7 @@ form {
     height: 60vh;
     background-color: rgb(0, 0, 0, 0.5);
     backdrop-filter: blur(12px);
-    /* display: none; */
+    display: none;
     justify-content: center;
     align-items: center;
     border-radius: 1em;
@@ -888,6 +910,22 @@ footer {
     display: none;
   }
 
+  #tickets-conteiner {
+    flex-direction: column;
+  }
+
+  .ticket-options {
+    max-width: 35em;
+    height: 40em;
+  }
+
+  .ticket-options img {
+    width: 35em;
+    max-height: 19em;
+}
+
+
+
   footer {
     border-top-left-radius: 4em;
     border-top-right-radius: 4em;
@@ -1052,4 +1090,15 @@ footer {
   #modal > figure img {
     display: none;
   }
+
+  .ticket-options {
+    max-width: 20em;
+    height: 40em;
+  }
+
+  .ticket-options img {
+    width: 25em;
+    max-height: 14em;
+  }
+
 }

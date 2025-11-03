@@ -103,7 +103,25 @@ function updateDisplay() {
 
 document.addEventListener("DOMContentLoaded", detectTicketType);
 
-// Abrimos la ventana modal
+let selectedDay = null; // guardará el elemento del día actualmente seleccionado
+
+function selectDay(element) {
+  // Si ya hay un día seleccionado, quitarle la clase "selected"
+  if (selectedDay) {
+    selectedDay.classList.remove("selected");
+  }
+
+  // Marcar el nuevo día
+  element.classList.add("selected");
+
+  // Guardarlo como el actual
+  selectedDay = element;
+
+  // Mostrar en consola el día elegido
+  console.log("Día seleccionado:", element.textContent.trim());
+}
+
+// Abrimos la ventana modal de los tickets
 function openTicketsModal() {
   console.log("Abriendo modal de tickets");
 
