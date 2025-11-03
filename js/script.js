@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // Abre la ventana modal de la galería
 function openModal(figura) {
   console.log("Función openModal");
-  //Buscamos la ventana modal
+  //Se busca la ventana modal
   var modal = document.getElementById("modal-gallery");
   //Cogemos la imagen para la ventana modal
   var rutaImagen = figura.firstElementChild.getAttribute("src");
@@ -103,10 +103,10 @@ function updateDisplay() {
 
 document.addEventListener("DOMContentLoaded", detectTicketType);
 
-let selectedDay = null; // guardará el elemento del día actualmente seleccionado
+let selectedDay = null;
 
 function selectDay(element) {
-  // Si ya hay un día seleccionado, quitarle la clase "selected"
+  // Para que si ya hay un día seleccionado, los otros se desmarquen
   if (selectedDay) {
     selectedDay.classList.remove("selected");
   }
@@ -117,7 +117,6 @@ function selectDay(element) {
   // Guardarlo como el actual
   selectedDay = element;
 
-  // Mostrar en consola el día elegido
   console.log("Día seleccionado:", element.textContent.trim());
 }
 
@@ -125,7 +124,7 @@ function selectDay(element) {
 function openTicketsModal() {
   console.log("Abriendo modal de tickets");
 
-  //Tomamos los valores del formulario
+  //Cogemos los valores del formulario
   const name = document.getElementById("name").value;
   const surname = document.getElementById("surname").value;
   const email = document.getElementById("email").value;
@@ -140,7 +139,7 @@ function openTicketsModal() {
   //Mostramos el modal
   document.getElementById("modal-tickets").style.display = "flex";
 
-  //Evitamos que el formulario recargue la página
+  //Para que el formulario recargue la página
   return false;
 }
 
