@@ -891,23 +891,23 @@ footer {
     font-size:22px;
   }
 
-  #modal {
+  #modal-gallery {
     top: 35%;
     left: 12%;
     width: 77vw;
     height: 35vh;
   }
 
-  #modal > figure {
+  #modal-gallery > figure {
     width: 100%;
   }
 
-  #modal > figure > * {
+  #modal-gallery > figure > * {
     width: 80%;
     max-width: 600px;
   }
 
-  #modal > figure img {
+  #modal-gallery > figure img {
     display: none;
   }
 
